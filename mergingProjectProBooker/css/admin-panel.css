@@ -1,0 +1,154 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    display: flex;
+    height: 100vh;
+}
+
+.admin-panel {
+    display: flex;
+    width: 100%;
+    min-height: 100vh;
+}
+
+.sidebar {
+    width: 250px;
+    background-color: #007BFF;
+    color: white;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.sidebar a {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    color: white;
+    text-decoration: none;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    margin-bottom: 15px;
+}
+
+.sidebar ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    display: block;
+    padding: 10px 0;
+    transition: background-color 0.3s ease;
+}
+
+.sidebar ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    padding-left: 10px;
+}
+
+.main-content {
+    flex: 1;
+    padding: 20px;
+}
+
+header {
+    background-color: white;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+header h2 {
+    font-size: 1.8rem;
+    color: #007BFF;
+}
+
+.calendar {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+thead th {
+    background-color: #007BFF;
+    color: white;
+    padding: 10px;
+    text-align: left;
+}
+
+tbody td {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+.btn {
+    background-color: #007BFF;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .admin-panel {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+        text-align: center;
+    }
+
+    .sidebar ul li {
+        display: inline-block;
+        margin-right: 15px;
+    }
+
+    .main-content {
+        padding: 10px;
+    }
+
+    table {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 500px) {
+    .sidebar ul li {
+        display: block;
+        margin-bottom: 10px;
+        margin-right: 0;
+    }
+
+    .btn {
+        padding: 8px 12px;
+        font-size: 0.8rem;
+    }
+}
